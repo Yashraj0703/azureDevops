@@ -1,0 +1,23 @@
+<!--Store this code in 'index.html' file inside the 'templates' folder-->
+<html lang="en">
+	<head>
+		<title>index</title>
+		
+	</head>
+
+	<body bgcolor="#e6ffee">
+		<div class="one">
+			<div class="two">
+				<h1>Side Bar</h1>
+				<ul>
+					<li class="active"><a href="{{url_for('index')}}">Index</a></li>
+					<li><a href="{{url_for('taskadd')}}">Add Task</a></li>
+                                        <li><a href="{{url_for('taskprogress')}}">Task in Progress</a></li>
+                                        <li><a href="{{url_for('taskdone')}}">Task Done</a></li>
+					<li><a href="{{url_for('logout')}}">Log out</a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</body>
+</html>

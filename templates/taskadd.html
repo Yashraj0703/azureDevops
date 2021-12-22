@@ -1,0 +1,35 @@
+<html> 
+  <head>
+     <title>Task Add</title>
+  </head>
+<body>
+<div>
+  <div>
+    <ul>
+         <li><a href="{{url_for('index')}}">Index</a></li>
+         <li class="active"><a href="{{'taskadd'}}"> Task Add</a></li>
+         <li><a href="{{url_for('taskprogress')}}">Index</a></li>
+         <li><a href="{{url_for('taskdone')}}">Index</a></li>
+    </ul>
+  </div>
+  <div class="content" align="center">
+     <div class="topbar">
+          <h2>ADD TASK</h2>
+     </div></br></br>
+  <form action="{{url_for('taskadd')}}" method="post" autocomplete="off">
+                  <div class = "msg" >{{msg}}</div>
+                  <label for="task_name">Task Name:</label>
+                  <input type="text" name="Task name" placeholder="Enter your task" class="textbox" id="task_name" required></br></br>
+                  <label for="task_desc">Task Desc:</label>
+                  <input type="text" name="Task Description" placeholder="Enter your Desc" class="textbox" id="task_desc" required></br></br>
+                  <label for="start_date">Start Date:</label>
+                  <input type="date" name="Task Start Date" placeholder="Enter your date" class="textbox" id="start_date" required></br></br>
+                  <label for="end_date">End Date:</label>
+                  <input type="date" name="Task End Date" placeholder="Enter your date" class="textbox" id="end_date" required></br></br>
+                  <input type="submit" class="btn" value="Submit Task"> 
+ </form>
+  </div>
+
+
+</body>
+</html>
