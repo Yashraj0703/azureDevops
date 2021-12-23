@@ -78,7 +78,15 @@ def index():
 def taskadd():
         if 'loggedin' in session:
                 if request.method == 'POST' and 'task_name' in request.form and 'task_desc' in request.form and 'start_date' in request.form and 'end_date' in request.form :
-                        
+			task_name = request.form['task_name']
+                        task_desc = request.form['task_desc']
+                        start_date = request.form['start_date']
+                        end_date = request.form['end_date']
+                        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+			cursor.execute('SELECT * FROM task WHERE id = %s ', (id,))
+			account  = cursor.fetchone()
+			if account:
+				msg = 
         return render_template("taskadd.html")
 
 @app.route("/taskprogress")
