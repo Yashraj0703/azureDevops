@@ -8,9 +8,9 @@ app=Flask(__name__)
 
 app.secret_key = 'ypur secret key'
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'root'
+app.config['MYSQL_HOST'] = '0.0.0.0'
+app.config['MYSQL_USER'] = 'yash@localhost'
+app.config['MYSQL_PASSWORD'] = 'Root@0703'
 app.config['MYSQL_DB'] = 'todolist'
 
 mysql=MySQL(app)
